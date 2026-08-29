@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-@app.route("/", methods=["GET"])
+@app.route("/webhook", methods=["GET", "POST"])
 def home():
     return jsonify({"status": "online"})
 
